@@ -2,11 +2,49 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get("/", (req, res) => res.type('html').send(html));
+app.get("/", (req, res) => res.type('json').send(json));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
+const json = `
+{
+  "dreamlo": {
+  "leaderboard": {
+  "entry": [
+  {
+  "name": "Max",
+  "score": "2370",
+  "seconds": "0",
+  "text": "",
+  "date": "10/1/2022 4:44:15 PM"
+  },
+  {
+  "name": "ImBettr",
+  "score": "1804",
+  "seconds": "0",
+  "text": "",
+  "date": "10/2/2022 3:41:45 AM"
+  },
+  {
+  "name": "NickWuzHere",
+  "score": "1542",
+  "seconds": "0",
+  "text": "",
+  "date": "10/2/2022 5:17:15 AM"
+  },
+  {
+  "name": "Bob",
+  "score": "132",
+  "seconds": "0",
+  "text": "",
+  "date": "10/1/2022 10:08:08 PM"
+  }
+  ]
+  }
+  }
+  }
+`
 const html = `
 <!DOCTYPE html>
 <html>
