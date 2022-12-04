@@ -2,10 +2,16 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get("/", (req, res) => res.type('json').send(json));
+app.get("/", (req, res) => res.type('text').send(pipe));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
+const pipe = `
+Max|2370|0||10/1/2022 4:44:15 PM|0
+ImBettr|1804|0||10/2/2022 3:41:45 AM|1
+NickWuzHere|1542|0||10/2/2022 5:17:15 AM|2
+Bob|132|0||10/1/2022 10:08:08 PM|3
+`
 
 const json = `
 {
